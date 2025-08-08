@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iPhone Panel</title>
+<link rel="manifest" href="manifest.json">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #00c6ff, #0072ff);
+        color: white;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        padding: 20px;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+    .btn {
+        background: white;
+        color: #0072ff;
+        padding: 15px 20px;
+        margin: 15px;
+        border: none;
+        border-radius: 8px;
+        font-size: 1em;
+        cursor: pointer;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        transition: transform 0.2s;
+    }
+    .btn:hover {
+        transform: scale(1.05);
+    }
+</style>
+</head>
+<body>
+<header>📱 iPhone Panel</header>
+<button class="btn" onclick="alert('Button 1 Clicked!')">Button 1</button>
+<button class="btn" onclick="alert('Button 2 Clicked!')">Button 2</button>
+<p style="margin-top:30px; font-size:0.9em;">Add to Home Screen for app-like experience</p>
+<script>
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js');
+}
+</script>
+</body>
+</html>
